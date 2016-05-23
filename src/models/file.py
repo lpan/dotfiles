@@ -5,13 +5,15 @@ Class representation of a configuration file
 
 class File:
 
-    def __init__(self, name, path):
+    def __init__(self, name, location, env):
         """
-        name -- the name of the file. eg. ".vimrc"
-        path -- the location of the fiel. eg. "~/.vimrc"
+        string name -- the name of the file. eg. ".vimrc"
+        string location -- the location of the fiel. eg. "~/.vimrc"
+        array<string> env -- a list of environments
         """
         self.name = name
-        self.path = path
+        self.location = location
+        self.env = env
         # Ignore this file if it is True
         self.ignored = False
 

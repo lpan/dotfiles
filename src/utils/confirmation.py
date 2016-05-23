@@ -10,7 +10,7 @@ def confirm(question, proceed, abort):
     string abort -- will print if user aborts
     """
 
-    print(question + " [y/n] ", end="")
+    print(question + " [Y/n] ", end="")
     answer = input()
 
     if (answer == 'N' or answer == 'n'):
