@@ -2,19 +2,23 @@
   "data": [
     {
       "name": ".vimrc",
-      "location": "home"
+      "location": "home",
+      "env": ["desktop", "server", "osx"]
     },
     {
       "name": ".bashrc",
-      "location": "home"
+      "location": "home",
+      "env": ["desktop", "server"]
     },
     {
       "name": ".bash_profile",
-      "location": "home"
+      "location": "home",
+      "env": ["osx"]
     },
     {
       "name": "fish.config",
-      "location": ".config/fish/"
+      "location": ".config/fish",
+      "env": ["desktop", "osx"]
     }
   ]
 }
