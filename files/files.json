@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "name": ".vimrc",
+      "location": "home"
+    },
+    {
+      "name": ".bashrc",
+      "location": "home"
+    },
+    {
+      "name": ".bash_profile",
+      "location": "home"
+    },
+    {
+      "name": "fish.config",
+      "location": ".config/fish/"
+    }
+  ]
+}
