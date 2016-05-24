@@ -19,7 +19,7 @@ def get_data(path, env):
 
     for file in buffer['data']:
         if env in file['env']:
-            files.append(File(file['name'], file['location'], file['env']))
+            files.append(File(file['name'], file['location'], file['env'], env))
 
     return files
 
@@ -34,32 +34,35 @@ def check_file_exists(path):
 
     return False
 
-def get_path(location, name):
-    """
-    Get the absolute path of the destination
-    ('home', '.vimrc') => '/home/lawrence/.vimrc')
-    ('.config/fish', 'config.fish') => 'home/lawrence/.config/fish/config.fish'
-    string location -- location of the file (either "home", or a relative path)
-    string name -- name of the file
-    returns string (an absolute path)
-    """
-    if (location == 'home'):
-        return os.path.join(os.environ['HOME'], name)
-
-    return os.path.join(location, name)
-
 def ignore_files(files):
     """
     Check if a file already exists in the given path.
     If so, ask user if he or she wants to replace it.
     Call ignore() on file if not to replace
-    File file -- file object
+    array<File> files -- a collection of File objects
     """
     for file in files:
-        if (check_file_exists(get_path(file.location, file.name))):
+        if (check_file_exists(file.dst)):
             # if file exists, ask user if he wants to replace it
             if (not confirm(file.name + " already exists. Replace it?",
                             file.name + " will be replaced",
                             file.name + " will be kept")):
                 # if user says no, this particular file will be ignored
                 file.ignore()
+            else:
+                file.will_be_replaced()
+
+def make_symlinks(files, path):
+    """
+    Delete old files then make symbolic links
+    array<File> files -- a collection of File objects
+    string path -- the absolute path of the repository
+    """
+    for file in files:
+        if (not file.ignored):
+            # Proceed only if it is not ignored
+            if (file.to_be_replaced):
+                # If the file will be replaced, remove the old one
+                file.delete()
+            # Create the symbolic link
+            file.link(path)

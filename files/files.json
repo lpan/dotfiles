@@ -14,11 +14,6 @@
       "name": ".bash_profile",
       "location": "home",
       "env": ["osx"]
-    },
-    {
-      "name": "fish.config",
-      "location": ".config/fish",
-      "env": ["desktop", "osx"]
     }
   ]
 }
