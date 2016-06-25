@@ -11,6 +11,11 @@
       "env": ["desktop", "server"]
     },
     {
+      "name": ".zshrc",
+      "location": "home",
+      "env": ["desktop", "osx"]
+    },
+    {
       "name": ".bash_profile",
       "location": "home",
       "env": ["osx"]
