@@ -27,6 +27,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-surround'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'kien/ctrlp.vim'
 
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
@@ -62,6 +63,7 @@ let g:used_javascript_libs = 'angularjs, react'
 " Reactjs
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
 " For webpack-dev-server watcher
 set backupcopy=yes
 
@@ -80,6 +82,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers = ['tslint']
 
@@ -138,7 +141,7 @@ let python_highlight_all = 1
 if has('gui_running')
   set background=dark
   colorscheme brogrammer
-  set guifont =Monospace\ 20
+  set guifont =Monospace\ 15
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
   set guioptions-=r  "remove right-hand scroll bar
