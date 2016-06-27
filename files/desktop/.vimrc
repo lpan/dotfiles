@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 "color theme
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'marciomazza/vim-brogrammer-theme'
+Plugin 'kristijanhusak/vim-hybrid-material'
 
 " Markdown preview
 " Plugin 'suan/vim-instant-markdown'
@@ -27,7 +27,18 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'tpope/vim-surround'
 Plugin 'Shougo/vimproc.vim'
+
 Plugin 'kien/ctrlp.vim'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|node_modules',
+  \ 'file': '\.exe$\|\.so$\|\.DS_Store|.*\.pyc',
+  \ }
+
+" Open file in new tab with control + m
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
 
 " Nerdtree
 Plugin 'scrooloose/nerdtree'
@@ -40,6 +51,7 @@ map <C-n> :NERDTreeToggle<CR>
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 set laststatus=2
+let g:airline_theme = "hybrid"
 
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
@@ -140,7 +152,7 @@ let python_highlight_all = 1
 " Solarized
 if has('gui_running')
   set background=dark
-  colorscheme brogrammer
+  colorscheme hybrid_reverse
   set guifont =Monospace\ 15
   set guioptions-=m  "remove menu bar
   set guioptions-=T  "remove toolbar
