@@ -74,7 +74,7 @@ class File:
         if (location == 'home'):
             return os.path.join(os.environ['HOME'], name)
 
-        return os.path.join(location, name)
+        return os.path.join(os.environ['HOME'], location, name)
 
     @staticmethod
     def get_src_path(name, ENV):
