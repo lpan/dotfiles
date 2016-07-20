@@ -51,14 +51,12 @@ export PATH="$PATH:$HOME/bin:."
 alias c='clear'
 alias ll='ls -la'
 alias tmux='tmux -2'
-alias xclip='xclip -selection c'
-uuid4() {
-  node -e 'var u = require("node-uuid");console.log(u.v4());'
-}
+alias vi='nvim'
+alias vim='nvim-wrapper'
 
 #####
 # Git aliases
-alias gaa='git add --all'
+alias gaa='git add -A'
 alias gc='git commit'
 alias gd='git diff --color=always | less -r'
 alias gca='git commit --amend --reuse-message=HEAD'
