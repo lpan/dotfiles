@@ -6,6 +6,11 @@
       "env": ["desktop", "server", "osx"]
     },
     {
+      "name": "init.vim",
+      "location": ".config/nvim",
+      "env": ["desktop", "server", "osx"]
+    },
+    {
       "name": ".bashrc",
       "location": "home",
       "env": ["desktop", "server"]
