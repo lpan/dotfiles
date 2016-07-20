@@ -8,22 +8,12 @@
     {
       "name": "init.vim",
       "location": ".config/nvim",
-      "env": ["desktop", "server", "osx"]
-    },
-    {
-      "name": ".bashrc",
-      "location": "home",
-      "env": ["desktop", "server"]
+      "env": ["desktop", "osx"]
     },
     {
       "name": ".zshrc",
       "location": "home",
       "env": ["desktop", "osx"]
-    },
-    {
-      "name": ".bash_profile",
-      "location": "home",
-      "env": ["osx"]
     }
   ]
 }
