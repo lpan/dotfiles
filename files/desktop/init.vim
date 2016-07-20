@@ -28,6 +28,8 @@ Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'guns/vim-clojure-static'
 
 " node.js
 Plug 'digitaltoad/vim-jade'
@@ -56,12 +58,15 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:deoplete#enable_at_startup = 1
 
 " Neomake
-let b:neomake_javascript_enabled_makers = ['eslint']
 autocmd! BufWritePost,BufEnter * Neomake
 let g:neomake_verbose=3
 let g:neomake_logfile='/tmp/error.log'
 hi NeomakeErrorSign ctermfg=black ctermbg=red
 hi NeomakeWarningSign ctermfg=black ctermbg=yellow
+
+let b:neomake_javascript_enabled_makers = ['eslint']
+let b:neomake_c_enabled_makers = ['gcc']
+let b:neomake_python_enabled_makers = ['pep8']
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
