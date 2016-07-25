@@ -8,7 +8,7 @@ Plug 'mhartington/oceanic-next'
 " general
 Plug 'Shougo/vimproc.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -30,16 +30,18 @@ Plug 'mattn/emmet-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'guns/vim-clojure-static'
-
-" node.js
+Plug 'wlangstroth/vim-racket'
 Plug 'digitaltoad/vim-jade'
 Plug 'moll/vim-node'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
 Plug 'maksimr/vim-jsbeautify'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
+
+" Clojure
+Plug 'tpope/vim-fireplace'
 call plug#end()
 
 """ Plugin configuration
