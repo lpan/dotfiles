@@ -42,6 +42,7 @@ Plug 'maksimr/vim-jsbeautify'
 
 " Clojure
 Plug 'tpope/vim-fireplace'
+Plug 'kovisoft/paredit'
 call plug#end()
 
 """ Plugin configuration
@@ -53,11 +54,26 @@ map <C-n> :NERDTreeToggle<CR>
 set laststatus=2
 let g:airline_theme='oceanicnext'
 
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
+
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_this           = "@"
+let g:javascript_conceal_return         = "⇚"
+let g:javascript_conceal_undefined      = "¿"
+let g:javascript_conceal_NaN            = "ℕ"
+let g:javascript_conceal_prototype      = "¶"
+let g:javascript_conceal_static         = "•"
+let g:javascript_conceal_super          = "Ω"
+let g:javascript_conceal_arrow_function = "⇒"
+
 " vim-jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Deocomplete
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
@@ -79,6 +95,8 @@ let g:ctrlp_prompt_mappings = {
   \ 'AcceptSelection("e")': [],
   \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
   \ }
+
+" Key Mapping
 
 " General configuration
 
