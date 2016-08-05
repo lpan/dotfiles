@@ -17,6 +17,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
+Plug 'airblade/vim-gitgutter'
 
 " autocomplete
 function! DoRemote(arg)
@@ -47,6 +48,9 @@ call plug#end()
 
 """ Plugin configuration
 
+" Paredit
+let g:paredit_leader = '\'
+
 " Nerd Tree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -73,7 +77,6 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Deocomplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
