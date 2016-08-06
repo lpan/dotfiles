@@ -40,6 +40,7 @@ Plug 'pangloss/vim-javascript'
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
 Plug 'maksimr/vim-jsbeautify'
+Plug 'jaawerth/nrun.vim'
 
 " Clojure
 Plug 'tpope/vim-fireplace'
@@ -69,6 +70,8 @@ let g:neomake_verbose=3
 let g:neomake_logfile='/tmp/error.log'
 hi NeomakeErrorSign ctermfg=black ctermbg=red
 hi NeomakeWarningSign ctermfg=black ctermbg=yellow
+
+let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 
 let b:neomake_javascript_enabled_makers = ['eslint']
 let b:neomake_c_enabled_makers = ['gcc']
