@@ -43,16 +43,15 @@ _newline_precmd() { _newline_precmd() { echo } }
 
 export EDITOR=vim
 export CLICOLOR=1
-export PATH="/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin"
-export PATH="$PATH:$HOME/bin:."
+export PATH="/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin:$HOME/Workspaces/bin"
 
 #####
 # Aliases
 alias c='clear'
+alias l='ls'
 alias ll='ls -la'
 alias tmux='tmux -2'
-alias vi='nvim'
-alias vim='nvim-wrapper'
+alias vim='nvim'
 
 #####
 # Git aliases
@@ -66,17 +65,8 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 
 #####
 # Workspace aliases
-alias work='cd ~/Desktop/workspaces/active'
-alias play='cd ~/Desktop/workspaces/playground'
-
-#####
-# Plotly!! :)
-PLOT='/home/lawrence/Desktop/workspaces/plotly/streambed'
-alias plot="cd $PLOT"
-alias dep="cd $PLOT/deployment"
-alias front="cd $PLOT/shelly/filewell/static/filewell/src"
-alias style="cd $PLOT/shelly/shelly/static/plotlycss"
-export PATH="$PLOT/shelly/filewell/bin:$PATH"
+alias work='cd ~/Workspaces'
+alias play='cd ~/Workspaces/playground'
 
 export NVM_DIR="/home/lawrence/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
