@@ -18,12 +18,15 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
+Plug 'tmux-plugins/vim-tmux'
 
 " autocomplete
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
+Plug 'carlitux/deoplete-ternjs'
+Plug 'zchee/deoplete-jedi'
 
 " languages
 Plug 'fatih/vim-go'
@@ -61,8 +64,21 @@ let g:javascript_plugin_jsdoc = 1
 " vim-jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
-" Deocomplete
+" Deoplete
+
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#file#enable_buffer_path = 1
+" Disable preview window
+set completeopt-=preview
+" Use Tab
+inoremap <silent><expr> <TAB>
+		\ pumvisible() ? "\<C-n>" :
+		\ <SID>check_back_space() ? "\<TAB>" :
+		\ deoplete#mappings#manual_complete()
+		function! s:check_back_space() abort "{{{
+		let col = col('.') - 1
+		return !col || getline('.')[col - 1]  =~ '\s'
+  endfunction"}}}
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
