@@ -75,4 +75,4 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 #####
 # Workspace aliases
 alias work='cd ~/Desktop/workspaces'
-alias play='cd ~/Workspaces/playground'
+alias play='cd ~/Desktop/workspaces/playground'
