@@ -11,6 +11,11 @@
       "env": ["server"]
     },
     {
+      "name": ".tmux.conf",
+      "location": "home",
+      "env": ["desktop", "osx"]
+    },
+    {
       "name": "init.vim",
       "location": ".config/nvim",
       "env": ["desktop", "osx"]
