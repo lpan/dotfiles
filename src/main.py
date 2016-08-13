@@ -1,4 +1,5 @@
-import sys, os
+import sys
+import os
 
 from utils.confirmation import confirm
 from utils.environment import get_env
