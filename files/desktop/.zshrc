@@ -17,9 +17,6 @@ HYPHEN_INSENSITIVE="true"
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
-
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
@@ -77,5 +74,5 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 
 #####
 # Workspace aliases
-alias work='cd ~/Workspaces'
+alias work='cd ~/Desktop/workspaces'
 alias play='cd ~/Workspaces/playground'
