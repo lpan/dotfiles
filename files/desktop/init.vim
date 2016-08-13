@@ -18,6 +18,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
+Plug 'rking/ag.vim'
 Plug 'tmux-plugins/vim-tmux'
 
 " autocomplete
@@ -72,13 +73,13 @@ let g:deoplete#file#enable_buffer_path = 1
 set completeopt-=preview
 " Use Tab
 inoremap <silent><expr> <TAB>
-		\ pumvisible() ? "\<C-n>" :
-		\ <SID>check_back_space() ? "\<TAB>" :
-		\ deoplete#mappings#manual_complete()
-		function! s:check_back_space() abort "{{{
-		let col = col('.') - 1
-		return !col || getline('.')[col - 1]  =~ '\s'
-  endfunction"}}}
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ deoplete#mappings#manual_complete()
+function! s:check_back_space() abort "{{{
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction"}}}
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
@@ -95,13 +96,13 @@ let b:neomake_python_enabled_makers = ['pep8']
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|node_modules',
-  \ 'file': '\.exe$\|\.so$\|\.DS_Store|.*\.pyc',
-  \ }
+      \ 'dir':  '\.git$\|node_modules',
+      \ 'file': '\.exe$\|\.so$\|\.DS_Store|.*\.pyc',
+      \ }
 let g:ctrlp_prompt_mappings = {
-  \ 'AcceptSelection("e")': [],
-  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
-  \ }
+      \ 'AcceptSelection("e")': [],
+      \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+      \ }
 
 " Key Mapping
 

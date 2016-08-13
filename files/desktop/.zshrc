@@ -5,6 +5,8 @@ export ZSH=/home/lawrence/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
+# Minimalist theme
 ZSH_THEME="wezm"
 
 # case-sensitive completion.
@@ -26,7 +28,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 # User configuration
 
@@ -53,6 +55,12 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 export NVM_DIR="/home/lawrence/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+DEFAULT_USER='lawrence'
+
+# If not running interactively, do not do anything
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
 
 #####
 # Aliases
