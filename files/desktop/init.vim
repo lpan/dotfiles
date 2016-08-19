@@ -88,11 +88,11 @@ let g:neomake_logfile='/tmp/error.log'
 hi NeomakeErrorSign ctermfg=black ctermbg=red
 hi NeomakeWarningSign ctermfg=black ctermbg=yellow
 
-let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
+let g:neomake_javascript_enabled_makers = ['eslint']
+au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 
-let b:neomake_javascript_enabled_makers = ['eslint']
-let b:neomake_c_enabled_makers = ['gcc']
-let b:neomake_python_enabled_makers = ['pep8']
+let g:neomake_c_enabled_makers = ['gcc']
+let g:neomake_python_enabled_makers = ['pep8']
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
