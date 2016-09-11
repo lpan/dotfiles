@@ -5,8 +5,8 @@ INSTALL_VIM_PLUG='curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 
 INSTALL_ANTIGEN='git clone https://github.com/zsh-users/antigen ~/.antigen/antigen'
 
-INSTALL_OMZ='sh -c "$(curl -fsSL
-https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+# TODO apparently we need to run this using sh -c :P
+INSTALL_OMZ="$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 INSTALL_TPM='git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 
