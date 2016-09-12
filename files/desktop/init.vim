@@ -106,6 +106,9 @@ let g:ctrlp_prompt_mappings = {
 
 " Key Mapping
 
+" Compile and run c program inside vim
+nnoremap <F9> :! make -s <CR>
+
 " General configuration
 
 autocmd BufRead,BufNewFile *.md setlocal spell spelllang=en_ca
