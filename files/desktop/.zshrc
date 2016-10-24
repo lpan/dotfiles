@@ -30,6 +30,10 @@ antigen apply
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH:$HOME/Workspaces/bin"
+export PATH="$PATH:$HOME/.bin"
+
+export ANDROID_HOME=~/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
 
 # manually set your language environment
 export LANG=en_US.UTF-8
@@ -49,11 +53,13 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 export NVM_DIR="/home/lawrence/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export GOPATH=$HOME/Desktop/workspaces/go
+
 DEFAULT_USER='lawrence'
 
 # If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX" ]] && exec tmux
 
 #####
 # Aliases
@@ -61,7 +67,6 @@ alias c='clear'
 alias l='ls'
 alias ll='ls -la'
 alias tmux='tmux -2'
-alias vim='nvim'
 
 #####
 # Git aliases
@@ -77,3 +82,4 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 # Workspace aliases
 alias work='cd ~/Desktop/workspaces'
 alias play='cd ~/Desktop/workspaces/playground'
+alias loo='cd ~/Documents/waterloo'
