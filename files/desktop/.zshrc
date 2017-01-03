@@ -67,6 +67,7 @@ alias c='clear'
 alias l='ls'
 alias ll='ls -la'
 alias tmux='tmux -2'
+alias vim='nvim'
 
 #####
 # Git aliases

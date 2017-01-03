@@ -20,6 +20,8 @@ Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
 Plug 'rking/ag.vim'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ntpeters/vim-better-whitespace'
 
 " autocomplete
 function! DoRemote(arg)
@@ -40,6 +42,7 @@ Plug 'digitaltoad/vim-jade'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'c.vim'
 
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
@@ -48,6 +51,8 @@ Plug 'jaawerth/nrun.vim'
 
 " Clojure
 Plug 'tpope/vim-fireplace'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'guns/vim-clojure-highlight'
 call plug#end()
 
 """ Plugin configuration
@@ -67,7 +72,7 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Deoplete
 
-let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 0
 let g:deoplete#file#enable_buffer_path = 1
 " Disable preview window
 set completeopt-=preview
@@ -80,6 +85,15 @@ function! s:check_back_space() abort "{{{
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction"}}}
+
+" Evaluate Clojure buffers on load
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
+
+" rainbow_parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Neomake
 autocmd! BufWritePost,BufEnter * Neomake
@@ -104,7 +118,12 @@ let g:ctrlp_prompt_mappings = {
       \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
       \ }
 
+" C.vim
+let g:C_UseTool_cmake = 'yes'
+
 " Key Mapping
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 " General configuration
 
