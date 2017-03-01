@@ -23,6 +23,8 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
 
+Plug 'wakatime/vim-wakatime'
+
 " autocomplete
 function! DoRemote(arg)
   UpdateRemotePlugins
