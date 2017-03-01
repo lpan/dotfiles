@@ -43,6 +43,7 @@ Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'c.vim'
+Plug 'lervag/vimtex'
 
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
@@ -106,6 +107,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 
 let g:neomake_c_enabled_makers = ['gcc']
+let g:neomake_cpp_enabled_makers = ['gcc']
 let g:neomake_python_enabled_makers = ['pep8']
 
 " ctrl-p
@@ -124,6 +126,13 @@ let g:C_UseTool_cmake = 'yes'
 " Key Mapping
 "Remove all trailing whitespace by pressing F5
 nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
+autocmd BufEnter *.c nnoremap <F9> :! gcc % && ./a.out && rm a.out <CR>
+autocmd BufEnter *.cc nnoremap <F9> :! g++ % && ./a.out && rm a.out <CR>
+autocmd BufEnter *.js nnoremap <F9> :! node % <CR>
+autocmd BufEnter *.py nnoremap <F9> :! python3 % <CR>
+
+autocmd BufRead,BufNewFile *.shi set filetype=shi
 
 " General configuration
 

@@ -31,6 +31,7 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH:$HOME/Workspaces/bin"
 export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 
 export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
