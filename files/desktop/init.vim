@@ -75,8 +75,9 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " Deoplete
 
-let g:deoplete#enable_at_startup = 0
+let g:deoplete#enable_at_startup = 1
 let g:deoplete#file#enable_buffer_path = 1
+
 " Disable preview window
 set completeopt-=preview
 " Use Tab
