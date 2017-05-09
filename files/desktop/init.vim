@@ -46,11 +46,17 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'c.vim'
 Plug 'lervag/vimtex'
+Plug 'kchmck/vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
+
+Plug 'mtscout6/vim-cjsx'
 
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'jaawerth/nrun.vim'
+
+Plug 'flowtype/vim-flow'
 
 " Clojure
 Plug 'tpope/vim-fireplace'
@@ -69,6 +75,7 @@ let g:airline_theme='oceanicnext'
 
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 " vim-jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
@@ -106,7 +113,7 @@ let g:neomake_logfile='/tmp/error.log'
 hi NeomakeErrorSign ctermfg=black ctermbg=red
 hi NeomakeWarningSign ctermfg=black ctermbg=yellow
 
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
 au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 
 let g:neomake_c_enabled_makers = ['gcc']

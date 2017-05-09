@@ -35,6 +35,7 @@ export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 
 export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 # manually set your language environment
 export LANG=en_US.UTF-8
@@ -85,3 +86,8 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 alias work='cd ~/Desktop/workspaces/active'
 alias play='cd ~/Desktop/workspaces/playground'
 alias loo='cd ~/Documents/waterloo'
+
+#####
+# Universe
+#
+export SUDO=" "
