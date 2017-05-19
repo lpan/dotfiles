@@ -24,6 +24,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'wakatime/vim-wakatime'
+Plug 'junegunn/goyo.vim'
 
 " autocomplete
 function! DoRemote(arg)
@@ -44,7 +45,6 @@ Plug 'digitaltoad/vim-jade'
 Plug 'moll/vim-node'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
-Plug 'c.vim'
 Plug 'lervag/vimtex'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
@@ -163,7 +163,6 @@ filetype plugin indent on
 filetype plugin on
 
 " Theme
+set termguicolors
 syntax enable
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme OceanicNext
-set background=dark
