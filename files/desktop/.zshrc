@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/lawrence/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Antigen
-source /home/lawrence/.antigen/antigen/antigen.zsh
+source $HOME/.antigen/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -52,12 +52,10 @@ export ARCHFLAGS="-arch x86_64"
 
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export NVM_DIR="/home/lawrence/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export GOPATH=$HOME/Desktop/workspaces/go
-
-DEFAULT_USER='lawrence'
+DEFAULT_USER='lpan'
 
 # If not running interactively, do not do anything
 #[[ $- != *i* ]] && return
@@ -84,9 +82,8 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 
 #####
 # Workspace aliases
-alias work='cd ~/Desktop/workspaces/active'
-alias play='cd ~/Desktop/workspaces/playground'
-alias loo='cd ~/Documents/waterloo'
+alias work='cd ~/Workspace'
+alias play='cd ~/Workspace/playground'
 
 #####
 # Universe

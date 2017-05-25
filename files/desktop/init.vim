@@ -113,12 +113,15 @@ let g:neomake_logfile='/tmp/error.log'
 hi NeomakeErrorSign ctermfg=black ctermbg=red
 hi NeomakeWarningSign ctermfg=black ctermbg=yellow
 
-let g:neomake_javascript_enabled_makers = ['eslint', 'flow']
+let g:neomake_javascript_enabled_makers = ['eslint']
 au BufEnter *.js let b:neomake_javascript_eslint_exe = nrun#Which('eslint')
 
 let g:neomake_c_enabled_makers = ['gcc']
 let g:neomake_cpp_enabled_makers = ['gcc']
 let g:neomake_python_enabled_makers = ['pep8']
+
+" Vim flow
+let g:flow#flowpath = nrun#Which('flow')
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
@@ -164,5 +167,5 @@ filetype plugin on
 
 " Theme
 set termguicolors
-syntax enable
 colorscheme OceanicNext
+syntax enable
