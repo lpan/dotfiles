@@ -77,6 +77,7 @@ alias gc='git commit'
 alias gd='git diff --color=always | less -r'
 alias gca='git commit --amend --reuse-message=HEAD'
 alias gp='git push origin HEAD'
+alias gpf='git push origin HEAD --force'
 alias gs='git status'
 alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cgreen(%ar)%Creset %Cred%d%Creset'"
 
@@ -88,4 +89,6 @@ alias play='cd ~/Workspace/playground'
 #####
 # Universe
 #
+alias uni='cd ~/Workspace/universe'
 export SUDO=" "
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
