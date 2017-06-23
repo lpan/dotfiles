@@ -49,14 +49,16 @@ Plug 'lervag/vimtex'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 
-Plug 'mtscout6/vim-cjsx'
 
 " Javascript
 Plug 'jelera/vim-javascript-syntax'
+Plug 'mtscout6/vim-cjsx'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'jaawerth/nrun.vim'
-
 Plug 'flowtype/vim-flow'
+
+" Ruby
+Plug 'tpope/vim-rails'
 
 " Clojure
 Plug 'tpope/vim-fireplace'
