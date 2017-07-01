@@ -48,6 +48,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'lervag/vimtex'
 Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'groenewege/vim-less'
 
 
 " Javascript
@@ -56,6 +58,7 @@ Plug 'mtscout6/vim-cjsx'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'jaawerth/nrun.vim'
 Plug 'flowtype/vim-flow'
+Plug 'joukevandermaas/vim-ember-hbs'
 
 " Ruby
 Plug 'tpope/vim-rails'
