@@ -89,6 +89,13 @@ alias play='cd ~/Workspace/playground'
 #####
 # Universe
 #
-alias uni='cd ~/Workspace/universe'
+UNI_PATH='~/Workspace/universe'
+alias uni="cd $UNI_PATH"
+alias juno="cd $UNI_PATH/juno"
+alias web="cd $UNI_PATH/web"
+alias mul="cd $UNI_PATH/multiverse"
+alias tes="cd $UNI_PATH/test"
+alias met="cd $UNI_PATH/meta"
+
 export SUDO=" "
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
