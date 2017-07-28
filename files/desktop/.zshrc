@@ -68,7 +68,12 @@ alias l='ls'
 alias ll='ls -la'
 alias tmux='tmux -2'
 alias vim='nvim'
+alias dc='docker-compose'
+alias dce='docker-compose exec'
+alias dcr='docker-compose run'
+
 alias octave='octave --no-gui'
+alias racket='rlwrap racket'
 
 #####
 # Git aliases

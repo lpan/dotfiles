@@ -6,6 +6,8 @@ Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mhartington/oceanic-next'
 
 " general
+Plug 'reedes/vim-pencil'
+Plug 'jpalardy/vim-slime'
 Plug 'Shougo/vimproc.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -25,6 +27,22 @@ Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'wakatime/vim-wakatime'
 Plug 'junegunn/goyo.vim'
+
+" vim-pencil
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+        \ | call lexical#init()
+        \ | call litecorrect#init()
+        \ | call textobj#quote#init()
+        \ | call textobj#sentence#init()
+augroup END
+
+" vim-slime
+let g:slime_no_mappings = 1
+let g:slime_target = "tmux"
+xmap cpp <Plug>SlimeRegionSend
+nmap cpp <Plug>SlimeParagraphSend
 
 " autocomplete
 function! DoRemote(arg)
@@ -50,11 +68,9 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'groenewege/vim-less'
-
+Plug 'othree/html5.vim'
 
 " Javascript
-Plug 'jelera/vim-javascript-syntax'
-Plug 'mtscout6/vim-cjsx'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'jaawerth/nrun.vim'
 Plug 'flowtype/vim-flow'
@@ -81,6 +97,22 @@ let g:airline_theme='oceanicnext'
 " vim-javascript
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
+
+let g:javascript_conceal_function             = "ƒ"
+let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_this                 = "@"
+let g:javascript_conceal_return               = "⇚"
+let g:javascript_conceal_undefined            = "¿"
+let g:javascript_conceal_NaN                  = "ℕ"
+let g:javascript_conceal_prototype            = "¶"
+let g:javascript_conceal_static               = "•"
+let g:javascript_conceal_super                = "Ω"
+let g:javascript_conceal_arrow_function       = "⇒"
+let g:javascript_conceal_noarg_arrow_function = "🞅"
+let g:javascript_conceal_underscore_arrow_function = "🞅"
+
+set conceallevel=1
+map <C-j> :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
 " vim-jsx
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
