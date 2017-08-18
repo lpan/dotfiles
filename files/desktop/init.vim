@@ -6,6 +6,7 @@ Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mhartington/oceanic-next'
 
 " general
+Plug 'metakirby5/codi.vim'
 Plug 'reedes/vim-pencil'
 Plug 'jpalardy/vim-slime'
 Plug 'Shougo/vimproc.vim'
@@ -20,13 +21,19 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'jparise/vim-graphql'
 
 Plug 'wakatime/vim-wakatime'
 Plug 'junegunn/goyo.vim'
+
+" ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " vim-pencil
 augroup pencil
