@@ -75,6 +75,10 @@ alias dcr='docker-compose run'
 alias octave='octave --no-gui'
 alias racket='rlwrap racket'
 
+alias vs='expressvpn status'
+alias vc='expressvpn connect'
+alias vd='expressvpn disconnect'
+
 #####
 # Git aliases
 alias gaa='git add -A'
