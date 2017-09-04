@@ -35,16 +35,6 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" vim-pencil
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,mkd call pencil#init()
-        \ | call lexical#init()
-        \ | call litecorrect#init()
-        \ | call textobj#quote#init()
-        \ | call textobj#sentence#init()
-augroup END
-
 " vim-slime
 let g:slime_no_mappings = 1
 let g:slime_target = "tmux"
