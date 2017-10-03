@@ -49,7 +49,14 @@ Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 Plug 'carlitux/deoplete-ternjs'
 Plug 'zchee/deoplete-jedi'
 
+" elm-vim
+let g:elm_format_autosave = 0
+let g:elm_format_fail_silently = 1
+
 " languages
+Plug 'hkmix/vim-george'
+Plug 'derekwyatt/vim-scala'
+Plug 'ElmCast/elm-vim'
 Plug 'fatih/vim-go'
 Plug 'mattn/emmet-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
