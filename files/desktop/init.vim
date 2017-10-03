@@ -82,11 +82,6 @@ Plug 'joukevandermaas/vim-ember-hbs'
 
 " Ruby
 Plug 'tpope/vim-rails'
-
-" Clojure
-Plug 'tpope/vim-fireplace'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'guns/vim-clojure-highlight'
 call plug#end()
 
 """ Plugin configuration
