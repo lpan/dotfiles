@@ -5,10 +5,11 @@ My awesome dotfiles
 
 ### Dependencies
 
-* Python3
-* Tmux
-* Neovim
-* ZSH
+* git
+* python3
+* tmux
+* neovim
+* zsh
 
 ```console
 git clone https://github.com/lpan/dotfiles
@@ -16,6 +17,9 @@ cd dotfiles
 bash setup.sh
 cd src
 python3 main.py -d
+
+# change your default shell to zsh
+chsh -s /bin/zsh
 ```
 
 ## Cheat sheet
