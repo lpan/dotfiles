@@ -4,9 +4,11 @@ My awesome dotfiles
 ## Cheat sheet
 
 ### Tmux
-* vertical split `ctrl-s + -`
-* horizontal split `ctrl-s + |`
-* move up/down/left/right `ctrl-s + k/j/h/l`
+* vertical split `ctrl-s -`
+* horizontal split `ctrl-s |`
+* move up/down/left/right `ctrl-s k/j/h/l`
+* new window `ctrl-s c`
+* next window `ctrl-s n`
 
 ### Vim
 * open file browser `ctrl-n`
