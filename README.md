@@ -1,6 +1,16 @@
 # dotfiles
 My awesome dotfiles
 
+## Installation
+
+```console
+git clone https://github.com/lpan/dotfiles
+cd dotfiles
+bash setup.sh
+cd src
+python3 main.py -d
+```
+
 ## Cheat sheet
 
 ### Tmux
