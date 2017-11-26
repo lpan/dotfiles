@@ -3,6 +3,13 @@ My awesome dotfiles
 
 ## Installation
 
+### Dependencies
+
+* Python3
+* Tmux
+* Neovim
+* ZSH
+
 ```console
 git clone https://github.com/lpan/dotfiles
 cd dotfiles
