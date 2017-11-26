@@ -37,7 +37,7 @@ export ANDROID_HOME=~/Android/Sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH="$HOME/.rbenv/bin:$PATH"
 
-export GOPATH=$HOME/Workspaces/go
+export GOPATH=$HOME/Workspace/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
@@ -96,6 +96,7 @@ alias gpf='git push origin HEAD --force'
 alias gs='git status'
 alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cgreen(%ar)%Creset %Cred%d%Creset'"
 alias gfu='git fetch upstream master'
+alias gru='git rebase upstream/master'
 
 #####
 # Workspace aliases
