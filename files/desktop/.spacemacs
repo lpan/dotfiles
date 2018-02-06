@@ -42,7 +42,6 @@
      org
      spell-checking
      syntax-checking
-     themes-megapack
      version-control
      )
    dotspacemacs-additional-packages
