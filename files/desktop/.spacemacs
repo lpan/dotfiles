@@ -7,6 +7,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     rust
      ;; languages
      (go :variables go-tab-width 4)
      (shell
@@ -26,12 +27,11 @@
      ;; miscs
      (auto-completion
       :variables
-      auto-completion-enable-snippets-in-popup t
       auto-completion-enable-help-tooltip t
       auto-completion-enable-sort-by-usage t
       auto-completion-return-key-behavior 'cycle
       auto-completion-tab-key-behavior 'complete
-      auto-completioOnNodeSelectn-complete-with-key-sequence nil
+      auto-completion-complete-with-key-sequence nil
       auto-completion-complete-with-key-sequence-delay 0.05
       auto-completion-private-snippets-directory nil)
      better-defaults
@@ -41,7 +41,9 @@
      markdown
      org
      spell-checking
-     syntax-checking
+     (syntax-checking
+      :variables
+      syntax-checking-enable-tooltips nil)
      version-control
      )
    dotspacemacs-additional-packages
@@ -100,7 +102,6 @@
    dotspacemacs-which-key-delay 0.4
    dotspacemacs-which-key-position 'bottom
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-fullscreen-at-startup t
    dotspacemacs-fullscreen-use-non-native nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-active-transparency 90
