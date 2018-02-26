@@ -25,6 +25,9 @@
      ;; frameworks
      ruby-on-rails
      ;; miscs
+     (ibuffer
+      :variables
+      ibuffer-group-buffers-by 'projects)
      (auto-completion
       :variables
       auto-completion-enable-help-tooltip t
