@@ -31,6 +31,7 @@ export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 export PATH="$PATH:$HOME/Workspaces/bin"
 export PATH="$PATH:$HOME/.bin"
+export PATH="$PATH:$HOME/.node/bin:$PATH"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 
 export ANDROID_HOME=~/Android/Sdk
@@ -56,8 +57,8 @@ export ARCHFLAGS="-arch x86_64"
 
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 DEFAULT_USER='lpan'
 
@@ -104,8 +105,15 @@ alias work='cd ~/Workspace'
 alias wgo='cd ~/Workspace/go/src/github.com/'
 alias play='cd ~/Workspace/playground'
 
-export SUDO=" "
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export SUDO=" "
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/lpan/.node/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/lpan/.node/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/lpan/.node/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/lpan/.node/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
