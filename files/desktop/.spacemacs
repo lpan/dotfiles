@@ -43,6 +43,7 @@
      helm
      markdown
      org
+     spell-checking
      (syntax-checking
       :variables
       syntax-checking-enable-tooltips nil)
