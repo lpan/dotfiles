@@ -7,8 +7,9 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
-     rust
+     vimscript
      ;; languages
+     rust
      (go :variables go-tab-width 4)
      (shell
       :variables
@@ -23,6 +24,7 @@
      ruby
      yaml
      ;; frameworks
+     react
      ruby-on-rails
      ;; miscs
      (ibuffer
@@ -54,6 +56,7 @@
      editorconfig
      dockerfile-mode
      protobuf-mode
+     flow-minor-mode
      )
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
@@ -125,16 +128,17 @@
    ))
 
 (defun dotspacemacs/user-init ()
-  "user init"
   (setq custom-file "~/.emacs.d/custom.el")
-  (load custom-file)
-  )
+  (load custom-file))
 
 (defun dotspacemacs/user-config ()
-  "user config"
+  (use-package js2-mode
+    :config
+    (js2-mode-hide-warnings-and-errors)
+    (setq
+     js2-basic-offset 2))
   (use-package editorconfig
     :ensure t
     :config
     (editorconfig-mode 1))
-  (setq-default evil-escape-key-sequence "jl")
-  )
+  (setq-default evil-escape-key-sequence "jl"))
