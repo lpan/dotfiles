@@ -25,6 +25,7 @@
      ;; frameworks
      ruby-on-rails
      ;; miscs
+     themes-megapack
      (ibuffer
       :variables
       ibuffer-group-buffers-by 'projects)
@@ -38,6 +39,7 @@
       auto-completion-complete-with-key-sequence-delay 0.05
       auto-completion-private-snippets-directory nil)
      better-defaults
+     vagrant
      git
      github
      helm
@@ -72,11 +74,12 @@
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+   ; dotspacemacs-themes '(spacemacs-dark
+   ;                       spacemacs-light)
+   dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Cousine"
-                               :size 15
+                               :size 13
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
