@@ -45,13 +45,6 @@ export PATH=$PATH:/usr/local/go/bin
 # manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
-
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
@@ -72,7 +65,6 @@ alias c='clear'
 alias l='ls'
 alias ll='ls -la'
 alias tmux='tmux -2'
-alias vim='nvim'
 alias dc='docker-compose'
 alias dce='docker-compose exec'
 alias dcr='docker-compose run'
@@ -102,7 +94,7 @@ alias gru='git rebase upstream/master'
 #####
 # Workspace aliases
 alias work='cd ~/Workspace'
-alias wgo='cd ~/Workspace/go/src/github.com/'
+alias cdgo='cd ~/Workspace/go/src/github.com/'
 alias play='cd ~/Workspace/playground'
 
 # export SUDO=" "
