@@ -81,8 +81,8 @@
    ;                       spacemacs-light)
    dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Cousine"
-                               :size 13
+   dotspacemacs-default-font '("Ubuntu Mono"
+                               :size 18
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
