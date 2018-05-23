@@ -34,6 +34,10 @@ export GOPATH=$HOME/Workspace/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
+# Install Ruby Gems to ~/.gems'
+export GEM_HOME=$HOME/.gems
+export PATH=$HOME/.gems/bin:$PATH
+
 # manually set your language environment
 export LANG=en_US.UTF-8
 
@@ -46,9 +50,10 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 DEFAULT_USER='lpan'
 
-# If not running interactively, do not do anything
-#[[ $- != *i* ]] && return
-#[[ -z "$TMUX" ]] && exec tmux
+export ANDROID_HOME=$HOME/Workspace/Android
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 #####
 # Aliases

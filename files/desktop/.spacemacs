@@ -7,30 +7,33 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     (c-c++ :variables
+            c-c++-default-mode-for-headers 'c++-mode
+            c-c++-enable-clang-support t)
      vimscript
      ;; languages
      rust
      (go :variables go-tab-width 4)
-     (shell
-      :variables
-      shell-default-height 30
-      shell-default-shell 'multi-term
-      shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-shell 'multi-term
+            shell-default-position 'bottom)
      clojure
      emacs-lisp
+     ess
      html
      javascript
      python
      ruby
      yaml
+     latex
      ;; frameworks
      react
      ruby-on-rails
      ;; miscs
      themes-megapack
-     (ibuffer
-      :variables
-      ibuffer-group-buffers-by 'projects)
+     (ibuffer :variables
+              ibuffer-group-buffers-by 'projects)
      (auto-completion
       :variables
       auto-completion-enable-help-tooltip t
@@ -77,12 +80,12 @@
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   ; dotspacemacs-themes '(spacemacs-dark
-   ;                       spacemacs-light)
+                                        ; dotspacemacs-themes '(spacemacs-dark
+                                        ;                       spacemacs-light)
    dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-default-font '("Ubuntu Mono"
-                               :size 18
+                               :size 20
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -144,4 +147,7 @@
     :ensure t
     :config
     (editorconfig-mode 1))
-  (setq-default evil-escape-key-sequence "jl"))
+  (setq-default evil-escape-key-sequence "jl")
+  (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  (add-hook 'c++-mode-hook (lambda () ((add-hook 'before-save-hook 'spacemacs/indent-region-or-buffer))))
+  (add-hook 'before-save-hook 'delete-trailing-whitespace))
