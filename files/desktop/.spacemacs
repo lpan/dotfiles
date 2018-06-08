@@ -7,30 +7,27 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
-     (c-c++ :variables
-            c-c++-default-mode-for-headers 'c++-mode
-            c-c++-enable-clang-support t)
-     vimscript
      ;; languages
-     rust
-     (go :variables go-tab-width 4)
-     (shell :variables
-            shell-default-height 30
-            shell-default-shell 'multi-term
-            shell-default-position 'bottom)
+     (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
+     (go :variables go-tab-width 4 go-use-gometalinter t)
+     (shell :variables shell-default-height 30 shell-default-shell 'multi-term shell-default-position 'bottom)
      clojure
      emacs-lisp
      ess
      html
      javascript
+     latex
      python
      ruby
+     rust
+     scala
+     vimscript
      yaml
-     latex
      ;; frameworks
      react
      ruby-on-rails
      ;; miscs
+     cscope
      themes-megapack
      (ibuffer :variables
               ibuffer-group-buffers-by 'projects)
