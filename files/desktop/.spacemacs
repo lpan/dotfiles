@@ -7,6 +7,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     typescript
      ;; languages
      (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
      (go :variables go-tab-width 4 go-use-gometalinter t)
@@ -27,6 +28,7 @@
      react
      ruby-on-rails
      ;; miscs
+     pdf-tools
      cscope
      themes-megapack
      (ibuffer :variables
@@ -140,11 +142,20 @@
     (js2-mode-hide-warnings-and-errors)
     (setq
      js2-basic-offset 2))
+
   (use-package editorconfig
     :ensure t
     :config
     (editorconfig-mode 1))
+
+  (use-package org
+    :config
+    (setq org-format-latex-options (plist-put org-format-latex-options :scale 1.7)))
+
   (setq-default evil-escape-key-sequence "jl")
+
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+
   (add-hook 'c++-mode-hook (lambda () ((add-hook 'before-save-hook 'spacemacs/indent-region-or-buffer))))
+
   (add-hook 'before-save-hook 'delete-trailing-whitespace))

@@ -55,6 +55,9 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# node
+export PATH=$PATH:$HOME/.npm-packages/bin
+
 #####
 # Aliases
 alias c='clear'
@@ -91,3 +94,10 @@ alias gru='git rebase upstream/master'
 # Workspace aliases
 alias work='cd ~/Workspace'
 alias play='cd ~/Workspace/playground'
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
