@@ -24,11 +24,6 @@
       "name": ".spacemacs",
       "location": "home",
       "env": ["desktop", "osx"]
-    },
-    {
-      "name": "profiles.clj",
-      "location": ".lein",
-      "env": ["desktop", "osx"]
     }
   ]
 }
