@@ -27,6 +27,7 @@ antigen apply
 
 # User configuration
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # go
@@ -34,9 +35,9 @@ export GOPATH=$HOME/Workspace/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
-# Install Ruby Gems to ~/.gems'
-export GEM_HOME=$HOME/.gems
-export PATH=$HOME/.gems/bin:$PATH
+# python
+export PIPENV_IGNORE_VIRTUALENVS=1
+export PATH=$PATH:/Users/fpan/Library/Python/3.7/bin
 
 # manually set your language environment
 export LANG=en_US.UTF-8
@@ -44,19 +45,6 @@ export LANG=en_US.UTF-8
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-DEFAULT_USER='lpan'
-
-export ANDROID_HOME=$HOME/Workspace/Android
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# node
-export PATH=$PATH:$HOME/.npm-packages/bin
 
 #####
 # Aliases
@@ -71,10 +59,6 @@ alias mine='sudo chown -R $USER:$USER .'
 
 alias octave='octave --no-gui'
 alias racket='rlwrap racket'
-
-alias vs='expressvpn status'
-alias vc='expressvpn connect'
-alias vd='expressvpn disconnect'
 
 #####
 # Git aliases
@@ -95,9 +79,3 @@ alias gru='git rebase upstream/master'
 alias work='cd ~/Workspace'
 alias play='cd ~/Workspace/playground'
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/lpan/.npm-packages/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh

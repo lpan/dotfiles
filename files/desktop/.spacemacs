@@ -57,10 +57,14 @@
      )
    dotspacemacs-additional-packages
    '(
+     makefile-mode
      editorconfig
      dockerfile-mode
      protobuf-mode
+     solidity-mode
      flow-minor-mode
+     ; pipenv only merged to spacemacs dev branch atm
+     pipenv
      )
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
@@ -83,8 +87,8 @@
                                         ;                       spacemacs-light)
    dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Ubuntu Mono"
-                               :size 20
+   dotspacemacs-default-font '("Cousine"
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -142,6 +146,13 @@
     (js2-mode-hide-warnings-and-errors)
     (setq
      js2-basic-offset 2))
+
+  (use-package pipenv
+    :hook (python-mode . pipenv-mode)
+    :init
+    (setq
+     pipenv-projectile-after-switch-function
+     #'pipenv-projectile-after-switch-extended))
 
   (use-package editorconfig
     :ensure t
