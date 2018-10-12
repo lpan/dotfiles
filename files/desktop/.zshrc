@@ -60,6 +60,8 @@ alias mine='sudo chown -R $USER:$USER .'
 alias octave='octave --no-gui'
 alias racket='rlwrap racket'
 
+alias kb='kubectl'
+
 #####
 # Git aliases
 alias gaa='git add -A'
@@ -78,4 +80,3 @@ alias gru='git rebase upstream/master'
 # Workspace aliases
 alias work='cd ~/Workspace'
 alias play='cd ~/Workspace/playground'
-
