@@ -165,6 +165,8 @@
 
   (setq-default evil-escape-key-sequence "jl")
 
+  (setq-default python-shell-interpreter "python3")
+
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
   (add-hook 'c++-mode-hook (lambda () ((add-hook 'before-save-hook 'spacemacs/indent-region-or-buffer))))
