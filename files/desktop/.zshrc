@@ -80,3 +80,8 @@ alias gru='git rebase upstream/master'
 # Workspace aliases
 alias work='cd ~/Workspace'
 alias play='cd ~/Workspace/playground'
+
+####
+# ZSH bindings
+bindkey "^K" up-line-or-search
+bindkey "^J" down-line-or-search
