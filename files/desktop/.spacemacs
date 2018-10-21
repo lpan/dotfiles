@@ -57,7 +57,6 @@
      )
    dotspacemacs-additional-packages
    '(
-     makefile-mode
      editorconfig
      dockerfile-mode
      protobuf-mode
