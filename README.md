@@ -1,5 +1,5 @@
 # dotfiles
-My awesome dotfiles
+My awesome dotfiles. Check them out [here](https://github.com/lpan/dotfiles/tree/master/files/desktop)!
 
 ## Installation
 
