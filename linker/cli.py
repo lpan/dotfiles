@@ -1,18 +1,22 @@
-import sys
-import os
+import json
 
-from utils.confirmation import confirm
-from utils.environment import get_env
-from utils.fs import get_data, ignore_files, make_symlinks
+from linker.exceptions import DstExists
+from linker.exceptions import SrcNotExist
+from linker.models import Dotfile
 
-# sort of a hack, get the last command line arg
-ENV = get_env(sys.argv[-1])
 
-# files => a list of file objects
-files = get_data("../files/files.json", ENV)
+def run():
+    with open('./mapping.json') as f:
+        mappings = json.load(f)['files']
 
-# call ignore() on certain files
-ignore_files(files)
+    files = [Dotfile(m) for m in mappings]
 
-# call remove_old() and link() on certain files
-make_symlinks(files, os.path.join(os.getcwd(), ".."))
+    for f in files:
+        try:
+            f.link()
+        except (SrcNotExist, DstExists) as e:
+            print('skipped linking {}: {}'.format(f, str(e)))
+
+
+if __name__ == '__main__':
+    run()

@@ -2,15 +2,15 @@
   "files": [
     {
       "name": ".zshrc",
-      "dest": "$HOME/.zshrc"
+      "dst": "$HOME/.zshrc"
     },
     {
       "name": ".tmux.conf",
-      "dest": "$HOME/.tmux.conf"
+      "dst": "$HOME/.tmux.conf"
     },
     {
       "name": ".spacemacs",
-      "dest": "$HOME/.spacemacs"
+      "dst": "$HOME/.spacemacs"
     }
   ]
 }

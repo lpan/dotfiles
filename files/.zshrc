@@ -43,6 +43,12 @@ export PIPENV_IGNORE_VIRTUALENVS=1
 export PATH=$PATH:/Users/fpan/Library/Python/3.7/bin
 export PATH=$PATH:/home/lpan/.local/bin
 
+# pyenv
+export PATH="/home/lpan/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
 # manually set your language environment
 export LANG=en_US.UTF-8
 
