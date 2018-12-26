@@ -1,14 +1,12 @@
 #!/bin/bash
 
-INSTALL_VIM_PLUG='curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+ANTIGEN='git clone https://github.com/zsh-users/antigen ~/.antigen/antigen'
 
-INSTALL_ANTIGEN='git clone https://github.com/zsh-users/antigen ~/.antigen/antigen'
+OMZ="$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# TODO apparently we need to run this using sh -c :P
-INSTALL_OMZ="$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+TPM='git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 
-INSTALL_TPM='git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
+PYENV='curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash'
 
 confirmation() {
   # $1 question
@@ -23,12 +21,10 @@ confirmation() {
   fi
 }
 
-confirmation "Install vim plug?" "$INSTALL_VIM_PLUG"
+confirmation "Install OH MY ZSH?" "$OMZ"
 
-confirmation "Install OH MY ZSH?" "$INSTALL_OMZ"
+confirmation "Install Antigen?" "$ANTIGEN"
 
-confirmation "Install Antigen?" "$INSTALL_ANTIGEN"
+confirmation "Install Tmux Plugin Manager?" "$TPM"
 
-confirmation "Install Tmux Plugin Manager?" "$INSTALL_TPM"
-
-echo "Run python3 main.py to link the dot files"
+confirmation "Install pyenv?" "$PYENV"

@@ -1,0 +1,16 @@
+{
+  "files": [
+    {
+      "name": ".zshrc",
+      "dst": "$HOME/.zshrc"
+    },
+    {
+      "name": ".tmux.conf",
+      "dst": "$HOME/.tmux.conf"
+    },
+    {
+      "name": ".spacemacs",
+      "dst": "$HOME/.spacemacs"
+    }
+  ]
+}
