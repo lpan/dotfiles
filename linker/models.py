@@ -23,11 +23,17 @@ class Dotfile:
         return self._name
 
     def _check(self):
-        if not os.path.isfile(self._src):
-            raise SrcNotExist(self._src)
+        src, dst = self._src, self._dst
 
-        if os.path.isfile(self._dst):
-            raise DstExists(self._dst)
+        if not os.path.isfile(src):
+            raise SrcNotExist(src)
+
+        if os.path.isfile(dst):
+            raise DstExists(dst)
+
+        # remove dst if it is a broken symlink
+        if os.path.islink(dst) and not os.path.exists(os.readlink(dst)):
+            os.remove(dst)
 
     def link(self):
         self._check()
