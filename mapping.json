@@ -9,6 +9,10 @@
       "dst": "$HOME/.tmux.conf"
     },
     {
+      "name": ".vimrc",
+      "dst": "$HOME/.vimrc"
+    },
+    {
       "name": ".spacemacs",
       "dst": "$HOME/.spacemacs"
     }
