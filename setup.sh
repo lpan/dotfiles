@@ -21,10 +21,10 @@ confirmation() {
   fi
 }
 
-confirmation "Install OH MY ZSH?" $OMZ
+confirmation "Install OH MY ZSH?" "$OMZ"
 
-confirmation "Install Antigen?" $ANTIGEN
+confirmation "Install Antigen?" "$ANTIGEN"
 
-confirmation "Install Tmux Plugin Manager?" $TPM
+confirmation "Install Tmux Plugin Manager?" "$TPM"
 
-confirmation "Install pyenv?" $PYENV
+confirmation "Install pyenv?" "$PYENV"
