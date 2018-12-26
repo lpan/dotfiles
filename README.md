@@ -11,7 +11,7 @@ Make sure the following are installed
 * zsh
 * emacs
 
-```console
+```bash
 git clone https://github.com/lpan/dotfiles
 cd dotfiles
 
