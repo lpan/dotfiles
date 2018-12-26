@@ -3,7 +3,7 @@ My awesome dotfiles.
 
 ## Installation
 
-Make sure the following are installed
+Install the following
 * git
 * python3
 * curl
@@ -19,7 +19,7 @@ cd dotfiles
 bash setup.sh
 
 # link the files
-python3 linker.cli
+python3 -m linker.cli
 
 # change your default shell to zsh
 chsh -s /bin/zsh
