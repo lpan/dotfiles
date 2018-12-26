@@ -1,22 +1,25 @@
 # dotfiles
-My awesome dotfiles. Check them out [here](https://github.com/lpan/dotfiles/tree/master/files/desktop)!
+My awesome dotfiles.
 
 ## Installation
 
-### Dependencies
-
+Make sure the following are installed
 * git
 * python3
+* curl
 * tmux
-* neovim
 * zsh
+* emacs
 
 ```console
 git clone https://github.com/lpan/dotfiles
 cd dotfiles
+
+# install dependencies
 bash setup.sh
-cd src
-python3 main.py -d
+
+# link the files
+python3 linker.cli
 
 # change your default shell to zsh
 chsh -s /bin/zsh
@@ -30,16 +33,3 @@ chsh -s /bin/zsh
 * move up/down/left/right `ctrl-s k/j/h/l`
 * new window `ctrl-s c`
 * next window `ctrl-s n`
-
-### Vim
-* open file browser `ctrl-n`
-  * open file in new tab `t`
-  * open file split `i`
-  * open file vertical split `s`
-  * expand a directory `o`
-  * go to parent directory `u`
-  * change root `C`
-* go to next tab `gt`
-* go to previous tab `gT`
-* got second tab `2gt`
-* search in current git repo `ctrl p`
