@@ -2,14 +2,12 @@ import json
 
 from linker.exceptions import DstExists
 from linker.exceptions import SrcNotExist
-from linker.models import Dotfile
+from linker.models import File
 
 
 def run():
     with open('./mapping.json') as f:
-        mappings = json.load(f)['files']
-
-    files = [Dotfile(m) for m in mappings]
+        files = [File(m) for m in json.load(f)['files']]
 
     for f in files:
         try:

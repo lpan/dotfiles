@@ -1,3 +1,4 @@
+import abc
 import os
 
 from linker.exceptions import InvalidMapping
@@ -5,24 +6,38 @@ from linker.exceptions import SrcNotExist
 from linker.exceptions import DstExists
 
 
-class Dotfile:
+class Dotfile(abc.ABC):
+    """
+    A Dotfile can be a plain UNIX file or a directory. It has to be declared in
+    /mapping.json and exists in /files/
+    """
 
     def __init__(self, mapping):
         try:
-            self._name = mapping['name']
+            src = mapping['src']
             dst = mapping['dst']
         except KeyError:
             raise InvalidMapping
 
-        cwd = os.getcwd()
+        self._name = os.path.basename(src)
 
-        self._src = os.path.join(cwd, 'files', self._name)
+        self._src = os.path.join(os.getcwd(), 'files', src)
         self._dst = os.path.expandvars(dst)
 
     def __str__(self):
         return self._name
 
-    def _check(self):
+    @abc.abstractmethod
+    def link(self):
+        pass
+
+
+class File(Dotfile):
+    """
+    File represents a plain file
+    """
+
+    def link(self):
         src, dst = self._src, self._dst
 
         if not os.path.isfile(src):
@@ -35,8 +50,5 @@ class Dotfile:
         if os.path.islink(dst) and not os.path.exists(os.readlink(dst)):
             os.remove(dst)
 
-    def link(self):
-        self._check()
-
-        os.symlink(self._src, self._dst)
-        print('linked {} to {}'.format(self._src, self._dst))
+        os.symlink(src, dst)
+        print('linked {} to {}'.format(src, dst))
