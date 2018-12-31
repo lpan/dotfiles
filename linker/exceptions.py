@@ -4,13 +4,9 @@ class InvalidMapping(Exception):
     """
 
 
-class SrcNotExist(Exception):
-
-    def __init__(self, path):
-        super().__init__('{} does not exist'.format(path))
+class InvalidSrc(Exception):
+    pass
 
 
-class DstExists(Exception):
-
-    def __init__(self, path):
-        super().__init__('{} already exists'.format(path))
+class InvalidDst(Exception):
+    pass
