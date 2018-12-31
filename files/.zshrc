@@ -28,6 +28,7 @@ antigen apply
 # User configuration
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.lpan.bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # go

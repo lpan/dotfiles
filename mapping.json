@@ -16,5 +16,11 @@
       "src": ".spacemacs",
       "dst": "$HOME/.spacemacs"
     }
+  ],
+  "directories": [
+    {
+      "src": "bin",
+      "dst": "$HOME/.lpan.bin"
+    }
   ]
 }
