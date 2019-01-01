@@ -1,20 +1,26 @@
 {
   "files": [
     {
-      "name": ".zshrc",
+      "src": ".zshrc",
       "dst": "$HOME/.zshrc"
     },
     {
-      "name": ".tmux.conf",
+      "src": ".tmux.conf",
       "dst": "$HOME/.tmux.conf"
     },
     {
-      "name": ".vimrc",
+      "src": ".vimrc",
       "dst": "$HOME/.vimrc"
     },
     {
-      "name": ".spacemacs",
+      "src": ".spacemacs",
       "dst": "$HOME/.spacemacs"
+    }
+  ],
+  "directories": [
+    {
+      "src": "bin",
+      "dst": "$HOME/.lpan.bin"
     }
   ]
 }
