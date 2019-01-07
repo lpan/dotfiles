@@ -21,6 +21,10 @@
     {
       "src": "bin",
       "dst": "$HOME/.lpan.bin"
+    },
+    {
+      "src": "shell",
+      "dst": "$HOME/.lpan.shell"
     }
   ]
 }

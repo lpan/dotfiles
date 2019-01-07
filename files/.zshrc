@@ -25,6 +25,8 @@ antigen apply
 # Minimalist theme
 # ZSH_THEME="wezm"
 
+source $HOME/.lpan.shell/*
+
 # User configuration
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
