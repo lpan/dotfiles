@@ -1,0 +1,5 @@
+#!/bin/bash
+
+org_dir=/home/lpan/Workspace/org
+
+find $org_dir | entr -r rclone sync -v $org_dir dropbox:org
