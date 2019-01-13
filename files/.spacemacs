@@ -62,6 +62,7 @@
      protobuf-mode
      solidity-mode
      flow-minor-mode
+     emojify
      ; pipenv only merged to spacemacs dev branch atm
      pipenv
      )
