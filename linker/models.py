@@ -107,4 +107,7 @@ class Directory(Dotfile):
             raise InvalidDst('{} is not a directory'.format(dst))
 
         for c in self._children:
-            c.link()
+            try:
+                c.link()
+            except (InvalidSrc, InvalidDst) as e:
+                print('skipped linking {}: {}'.format(c, e))
