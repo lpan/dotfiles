@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# general
+alias c='clear'
+alias l='ls'
+alias ll='ls -la'
+alias tmux='tmux -2'
+alias dc='docker-compose'
+alias dce='docker-compose exec'
+alias dcr='docker-compose run'
+alias mine='sudo chown -R $USER:$USER .'
+
+alias octave='octave --no-gui'
+alias racket='rlwrap racket'
+
+alias kc='kubectl'
+alias sc='systemctl'
+alias ssc='sudo systemctl'
+
+# git
+alias gaa='git add -A'
+alias gc='git commit'
+alias gco='git checkout'
+alias gd='git diff --color=always | less -r'
+alias gca='git commit --amend --reuse-message=HEAD'
+alias gp='git push origin HEAD'
+alias gpf='git push origin HEAD --force'
+alias gs='git status'
+alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cgreen(%ar)%Creset %Cred%d%Creset'"
+alias gfu='git fetch upstream master'
+alias gru='git rebase upstream/master'
+
+# workspace
+alias work='cd ~/Workspace'
+alias play='cd ~/Workspace/playground'
