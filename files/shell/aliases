@@ -30,6 +30,9 @@ alias glog="git log --pretty=format:'%C(yellow)%h%Creset %Cblue%an%Creset %s %Cg
 alias gfu='git fetch upstream master'
 alias gru='git rebase upstream/master'
 
-# workspace
+# navigation
+# TODO take a namespaced CLI approach
 alias work='cd ~/Workspace'
 alias play='cd ~/Workspace/playground'
+alias school='cd ~/Workspace/school'
+alias edit-aliases='vim ~/.lpan.shell/aliases'
