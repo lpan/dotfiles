@@ -2,3 +2,5 @@
 
 systemctl --user daemon-reload
 systemctl --user start dropbox
+
+systemctl --user status dropbox
