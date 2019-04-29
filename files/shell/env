@@ -23,6 +23,12 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# rvm
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# java
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
 # manually set your language environment
 export LANG=en_US.UTF-8
 
