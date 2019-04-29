@@ -32,7 +32,7 @@ alias gru='git rebase upstream/master'
 
 # navigation
 # TODO take a namespaced CLI approach
-alias work='cd ~/Workspace'
-alias play='cd ~/Workspace/playground'
+alias work='cd ~/me/git'
+alias play='cd ~/me/temp'
 alias school='cd ~/Workspace/school'
 alias edit-aliases='vim ~/.lpan.shell/aliases'
