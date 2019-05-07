@@ -6,8 +6,11 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.lpan.bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
+# snap + wayland
+export PATH="/snap/bin:$PATH"
+
 # go
-export GOPATH=$HOME/Workspace/go
+export GOPATH=$HOME/me/git/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
