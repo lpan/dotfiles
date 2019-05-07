@@ -7,28 +7,17 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
-     typescript
      ;; languages
      (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
      (go :variables go-tab-width 4 go-use-gometalinter t)
      (shell :variables shell-default-height 30 shell-default-shell 'multi-term shell-default-position 'bottom)
      clojure
      emacs-lisp
-     ess
-     html
-     javascript
      latex
      python
-     ruby
      rust
-     scala
-     vimscript
      yaml
-     ;; frameworks
-     react
-     ruby-on-rails
      ;; miscs
-     pdf-tools
      cscope
      themes-megapack
      (ibuffer :variables
@@ -61,10 +50,7 @@
      dockerfile-mode
      protobuf-mode
      solidity-mode
-     flow-minor-mode
-     emojify
-     ; pipenv only merged to spacemacs dev branch atm
-     pipenv
+     exec-path-from-shell
      )
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
@@ -87,11 +73,6 @@
                                         ;                       spacemacs-light)
    dotspacemacs-themes '(zenburn)
    dotspacemacs-colorize-cursor-according-to-state t
-   dotspacemacs-default-font '("Cousine"
-                               :size 14
-                               :weight normal
-                               :width normal
-                               :powerline-scale 1.1)
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-ex-command-key ":"
@@ -141,11 +122,8 @@
   (load custom-file))
 
 (defun dotspacemacs/user-config ()
-  (use-package js2-mode
-    :config
-    (js2-mode-hide-warnings-and-errors)
-    (setq
-     js2-basic-offset 2))
+  ; use shell PATH in case emacs doesn't inherit ENV variables from shell
+  (exec-path-from-shell-initialize)
 
   (use-package pipenv
     :hook (python-mode . pipenv-mode)
