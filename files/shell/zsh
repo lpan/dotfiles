@@ -19,8 +19,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 
-antigen theme robbyrussell
-# antigen theme fishy
+# antigen theme robbyrussell
+antigen theme fishy
 
 # Tell antigen that you're done.
 antigen apply
