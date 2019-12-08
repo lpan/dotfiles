@@ -6,8 +6,9 @@
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
-   '(
+   '(html
      ;; languages
+     javascript
      (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
      (go :variables go-tab-width 4 go-use-gometalinter t)
      (shell :variables shell-default-height 30 shell-default-shell 'multi-term shell-default-position 'bottom)
@@ -17,7 +18,9 @@
      python
      rust
      yaml
+     react
      ;; miscs
+     lsp
      cscope
      themes-megapack
      (ibuffer :variables
@@ -72,6 +75,7 @@
                                         ; dotspacemacs-themes '(spacemacs-dark
                                         ;                       spacemacs-light)
    dotspacemacs-themes '(zenburn)
+   ; dotspacemacs-themes '(white-sand)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-command-key "SPC"
@@ -114,8 +118,7 @@
    dotspacemacs-persistent-server nil
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-default-package-repository nil
-   dotspacemacs-whitespace-cleanup nil
-   ))
+   dotspacemacs-whitespace-cleanup nil))
 
 (defun dotspacemacs/user-init ()
   (setq custom-file "~/.emacs.d/custom.el")
@@ -125,12 +128,12 @@
   ; use shell PATH in case emacs doesn't inherit ENV variables from shell
   (exec-path-from-shell-initialize)
 
-  (use-package pipenv
-    :hook (python-mode . pipenv-mode)
-    :init
-    (setq
-     pipenv-projectile-after-switch-function
-     #'pipenv-projectile-after-switch-extended))
+  ;(use-package pipenv
+  ;  :hook (python-mode . pipenv-mode)
+  ;  :init
+  ;  (setq
+  ;   pipenv-projectile-after-switch-function
+  ;   #'pipenv-projectile-after-switch-extended))
 
   (use-package editorconfig
     :ensure t
