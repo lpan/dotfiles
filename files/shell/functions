@@ -1,5 +1,23 @@
 #!/bin/bash
 
+######################################################
+############### my own functions
+
+# $1 - our binary
+# $2 - their binary
+# $.... arguments
+compare() {
+    local our="$1"
+    local their="$2"
+    shift; shift
+
+    diff <($our $@) <($their $@)
+}
+
+
+
+######################################################
+
 # XXX lpan: copied from github.com/jessfraz/dotfiles
 
 # Simple calculator
@@ -82,13 +100,6 @@ fs() {
 		du $arg -- .[^.]* *
 	fi
 }
-
-# Use Git’s colored diff when available
-if hash git &>/dev/null ; then
-	diff() {
-		git diff --no-index --color-words "$@"
-	}
-fi
 
 # Create a data URL from a file
 dataurl() {
