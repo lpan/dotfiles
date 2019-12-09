@@ -77,9 +77,8 @@
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-                                        ; dotspacemacs-themes '(spacemacs-dark
-                                        ;                       spacemacs-light)
-   dotspacemacs-themes '(zenburn)
+   dotspacemacs-themes '(spacemacs-dark spacemacs-light)
+   ; dotspacemacs-themes '(zenburn)
    ; dotspacemacs-themes '(white-sand)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-leader-key "SPC"
