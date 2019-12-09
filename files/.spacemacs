@@ -61,6 +61,11 @@
 
 (defun dotspacemacs/init ()
   (setq-default
+   dotspacemacs-default-font '("Ubuntu Mono"
+   			                       :size 16
+                               :weight normal
+                               :width normal
+                               :powerline-offset 2)
    dotspacemacs-elpa-https t
    dotspacemacs-elpa-timeout 5
    dotspacemacs-check-for-update nil
