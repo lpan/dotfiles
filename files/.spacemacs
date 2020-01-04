@@ -12,6 +12,7 @@
      (c-c++ :variables c-c++-default-mode-for-headers 'c++-mode c-c++-enable-clang-support t)
      (go :variables go-tab-width 4 go-use-gometalinter t)
      (shell :variables shell-default-height 30 shell-default-shell 'multi-term shell-default-position 'bottom)
+     scala
      clojure
      emacs-lisp
      latex
@@ -20,7 +21,9 @@
      yaml
      react
      ;; miscs
-     lsp
+     (lsp :variables
+          lsp-eldoc-enable-hover nil
+          lsp-log-io t)
      cscope
      themes-megapack
      (ibuffer :variables
@@ -40,13 +43,15 @@
      github
      helm
      markdown
-     org
+     (org :variables
+          org-enable-org-journal-support t
+          org-journal-dir "~/me/sync/org/journal/"
+          org-journal-file-type 'weekly)
      spell-checking
      (syntax-checking
       :variables
       syntax-checking-enable-tooltips nil)
-     version-control
-     )
+     version-control)
    dotspacemacs-additional-packages
    '(
      editorconfig
@@ -62,7 +67,7 @@
 (defun dotspacemacs/init ()
   (setq-default
    dotspacemacs-default-font '("Ubuntu Mono"
-   			                       :size 16
+   			                       :size 18
                                :weight normal
                                :width normal
                                :powerline-offset 2)
@@ -71,15 +76,15 @@
    dotspacemacs-check-for-update nil
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-editing-style 'vim
-   dotspacemacs-verbose-loading nil
    dotspacemacs-startup-banner 'official
    dotspacemacs-startup-lists '((recents . 5)
                                 (projects . 7))
    dotspacemacs-startup-buffer-responsive t
    dotspacemacs-scratch-mode 'text-mode
-   dotspacemacs-themes '(spacemacs-dark spacemacs-light)
-   ; dotspacemacs-themes '(zenburn)
+   ; dotspacemacs-themes '(spacemacs-dark spacemacs-light)
+   dotspacemacs-themes '(zenburn)
    ; dotspacemacs-themes '(white-sand)
+   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-leader-key "SPC"
    dotspacemacs-emacs-command-key "SPC"
@@ -126,7 +131,14 @@
 
 (defun dotspacemacs/user-init ()
   (setq custom-file "~/.emacs.d/custom.el")
-  (load custom-file))
+  (load custom-file)
+
+  ; agenda
+  (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
+  (setq org-agenda-files
+        `("~/me/sync/org/logs/w2020.org"
+          "~/me/sync/org/projects/active/"
+          ,org-journal-dir)))
 
 (defun dotspacemacs/user-config ()
   ; use shell PATH in case emacs doesn't inherit ENV variables from shell
@@ -154,6 +166,18 @@
 
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
-  (add-hook 'c++-mode-hook (lambda () ((add-hook 'before-save-hook 'spacemacs/indent-region-or-buffer))))
+  (add-hook 'c++-mode-hook
+            (lambda () ((add-hook 'before-save-hook 'spacemacs/indent-region-or-buffer))))
+
+
+  (add-hook 'go-mode-hook 'lsp)
+  (defun lsp-go-install-save-hooks ()
+    (add-hook 'before-save-hook #'lsp-format-buffer t t)
+    (add-hook 'before-save-hook #'lsp-organize-imports t t))
+  (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+  (add-hook 'python-mode-hook 'lsp)
+  (add-hook 'java-mode-hook 'lsp)
+  (add-hook 'scala-mode-hook 'lsp)
 
   (add-hook 'before-save-hook 'delete-trailing-whitespace))
