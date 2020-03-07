@@ -8,6 +8,8 @@ TPM='git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm'
 
 PYENV='curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash'
 
+ASDF='git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.7'
+
 confirmation() {
   # $1 question
   # $2 command to eval
@@ -27,4 +29,6 @@ confirmation "Install Antigen?" "$ANTIGEN"
 
 confirmation "Install Tmux Plugin Manager?" "$TPM"
 
-confirmation "Install pyenv?" "$PYENV"
+# confirmation "Install pyenv?" "$PYENV"
+
+confirmation "Install asdf?" "$ASDF"
