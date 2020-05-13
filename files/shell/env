@@ -17,6 +17,9 @@ export PATH=$PATH:/usr/local/go/bin
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# dart
+export PATH="$PATH:/usr/lib/dart/bin"
+
 # python
 export PIPENV_IGNORE_VIRTUALENVS=1
 export PATH=$PATH:$HOME/.local/bin
@@ -27,6 +30,8 @@ export PATH=$PATH:$HOME/.local/bin
 # java
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+export ANDROID_HOME=$HOME/Android/Sdk
 
 # manually set your language environment
 export LANG=en_US.UTF-8
