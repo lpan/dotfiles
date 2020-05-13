@@ -1,5 +1,7 @@
 #!/bin/bash
 
-org_dir=/home/lpan/Workspace/org
+src_dir=/home/lpan/me/synced
 
-find $org_dir | entr -r rclone sync -v $org_dir dropbox:org
+while true; do
+  find $src_dir | entr -rd rclone sync -v $src_dir dbox:think
+done
