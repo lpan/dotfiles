@@ -11,10 +11,6 @@
     {
       "src": ".vimrc",
       "dst": "$HOME/.vimrc"
-    },
-    {
-      "src": ".spacemacs",
-      "dst": "$HOME/.spacemacs"
     }
   ],
   "directories": [
