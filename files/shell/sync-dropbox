@@ -3,5 +3,5 @@
 src_dir=/home/lpan/me/synced
 
 while true; do
-  find $src_dir | entr -rd rclone sync -v $src_dir dbox:think
+  find $src_dir | entr -rd rclone sync -v $src_dir dbox-secret:box
 done
