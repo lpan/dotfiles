@@ -4,6 +4,7 @@
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.lpan.bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # snap + wayland
@@ -23,6 +24,7 @@ export PATH="$PATH:/usr/lib/dart/bin"
 # python
 export PIPENV_IGNORE_VIRTUALENVS=1
 export PATH=$PATH:$HOME/.local/bin
+export PATH=/home/lpan/.pyenv/versions/3.7.2/bin:$PATH
 
 # asdf!
 . $HOME/.asdf/asdf.sh
